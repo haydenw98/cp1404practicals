@@ -1,8 +1,9 @@
+from random import randint
 
 def main():
     score = float(input("Enter score: "))
     print(evaluate_score(score))
-
+    print(evaluate_score(randint(1, 100)))
 
 
 def evaluate_score(score):
