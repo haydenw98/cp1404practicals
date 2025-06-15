@@ -1,8 +1,21 @@
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+             'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
+             'bob']
+
 def main():
     numbers = []
     get_numbers(numbers)
     #print(numbers)
     display_numbers(numbers)
+    check_username()
+
+
+def check_username():
+    username = input('Enter your username: ')
+    if username in usernames:
+        print("Access granted")
+    else:
+        print("Access denied")
 
 
 def get_numbers(numbers):
