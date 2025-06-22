@@ -1,7 +1,7 @@
 
 def main():
-    """Prompts the user to enter a colour name and then displays corresponding Hex colour code.
-    Case independent and repeats until user enters a blank line"""
+    """Prompt the user to enter a colour name and then display corresponding Hex colour code.
+    Case independent and will repeat until user enters a blank line"""
     colour_to_hex = {"AliceBlue": "#f0f8ff", "Burgundy": "#800020", "Champagne": "#f7e7ce", "CoralPink": "#f88379",
                      "DarkLavender": "#734f96", "Eggplant": "#614051", "Fawn": "#e5aa70", "FlamingoPink": "#fc8eac",
                      "Gray": "#bebebe", "Heliotrope": "#df73ff"}

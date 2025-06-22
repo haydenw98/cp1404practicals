@@ -6,7 +6,7 @@ Actual: 14 minutes
 
 
 def main():
-    """Counts the occurrences of a word in user inputted text and prints"""
+    """Count the occurrences of a word in user inputted text and prints."""
     word_to_count = {}
     text = input("Text: ")
     words = text.split()
@@ -17,7 +17,7 @@ def main():
         except KeyError:
             word_to_count[word] = 1
     words = sorted(word_to_count.keys())
-    width = max(len(word) for word in words)
+    max_word_length = max(len(word) for word in words)
     for word in words:
-        print(f"{word:{width}} : {word_to_count[word]}")
+        print(f"{word:{max_word_length}} : {word_to_count[word]}")
 main()

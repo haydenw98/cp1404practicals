@@ -13,7 +13,7 @@ def main():
         confirmation = input(f"Is your name {name}? (Y/n): ")
         if confirmation.upper() != "Y" and confirmation != "":
             name = input("Name: ")
-        email_to_name[email] = name
+        email_to_name[email] = name.title()
         email = input("Email: ")
 
     #Decided to try reuse this formatting trick, sorts alphabetically and list in line

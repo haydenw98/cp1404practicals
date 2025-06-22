@@ -8,6 +8,23 @@ INDEX_COUNTRY = 1
 INDEX_CHAMPION = 2
 
 
+def main():
+    """ Main program function to read, process, and display Wimbledon data."""
+    data = read_wimbledon_data(FILENAME)
+
+    champions = count_champions(data)
+    countries = extract_countries(data)
+
+    width = max(len(champion) for champion, count in champions.items())
+
+    print("Wimbledon Champions:")
+    for champion, wins in sorted(champions.items()):
+        print(f"{champion:{width}} {wins}")
+
+    print(f"\nThese {len(countries)} countries have won Wimbledon:")
+    print(", ".join(countries))
+
+
 def read_wimbledon_data(filename):
     """Read Wimbledon CSV file."""
     data = []
@@ -22,7 +39,7 @@ def read_wimbledon_data(filename):
 
 
 def count_champions(data):
-    """Counts how many times each champion has won."""
+    """Count the total wins for each champion."""
     champions = {}
     for record in data:
         champion = record[0]
@@ -40,23 +57,6 @@ def extract_countries(data):
         country = record[1]
         countries.add(country)
     return sorted(countries)
-
-
-def main():
-    """ Main program function to read, process, and display Wimbledon data."""
-    data = read_wimbledon_data(FILENAME)
-
-    champions = count_champions(data)
-    countries = extract_countries(data)
-
-    width = max(len(champion) for champion, count in champions.items())
-
-    print("Wimbledon Champions:")
-    for champion, wins in sorted(champions.items()):
-        print(f"{champion:{width}} {wins}")
-
-    print(f"\nThese {len(countries)} countries have won Wimbledon:")
-    print(", ".join(countries))
 
 
 main()
