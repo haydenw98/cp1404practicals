@@ -2,7 +2,7 @@
 cp1404 prac_06 - Hayden Watts
 Estimate - 45 minutes
 Start time - 9:45
-Actual time to complete and finish time - """
+Actual time to complete and finish time - 10:17, 32 minutes"""
 
 CURRENT_YEAR = 2025
 
