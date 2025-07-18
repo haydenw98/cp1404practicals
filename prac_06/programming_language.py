@@ -7,7 +7,7 @@ Actual time to complete and finish time - 9:41, 26 minutes"""
 class ProgrammingLanguage:
     """Represents information of a programming language."""
 
-    def __init__(self, name, typing, reflection, year):
+    def __init__(self, name="", typing="", reflection="", year=0):
         """Construct a ProgrammingLanguage from the given values."""
         self.name = name
         self.typing = typing
@@ -19,5 +19,5 @@ class ProgrammingLanguage:
         return self.typing == "Dynamic"
 
     def __str__(self):
-        """String representation of the programming language."""
+        """Display representation of the programming language."""
         return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
