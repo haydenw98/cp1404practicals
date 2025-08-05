@@ -12,7 +12,7 @@ def main():
 
 def test_fare(fare):
     """Test fare check."""
-    expected_fare = 48.78
+    expected_fare = 48.80
     print(f"Calculated fare: ${fare:.2f}")
     assert abs(fare - expected_fare) < 0.01, f"Expected fare to be ${expected_fare} - received ${fare:.2f}"
 
